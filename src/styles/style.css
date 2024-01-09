@@ -1,0 +1,614 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix for Chrome */
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+/* Custom Styling Starts Here */
+
+/* My Resets */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* General Styles */
+html {
+    font-size: 16px;
+}
+
+body {
+    max-width: 1440px;
+    width: 100%;
+    line-height: 1.5;
+}
+
+button,
+input,
+select,
+textarea {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 0;
+    font-weight: 600;
+}
+
+img,
+audio,
+video {
+    width: 100%;
+}
+
+/* Variables */
+:root {
+    --primary: #1E2640;
+    --secondary: #FFFFFF;
+    --tertiary: #D9D9D9;
+}
+
+/* Containers */
+.container-100 {
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Flex */
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.flex-24 {
+    flex: 0 1 24%;
+}
+
+.flex-32 {
+    flex: 0 1 32%;
+}
+
+.flex-49 {
+    flex: 0 1 49%;
+}
+
+.grid {
+    display: grid;
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #1A181E;
+}
+
+h3 {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+h5 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* Texts */
+.text {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 600;
+}
+
+/* Buttons */
+.button {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    color: #4D4D4D;
+    border: 1px solid #D9D9D9;
+    background-color: var(--secondary);
+    vertical-align: middle;
+    border-radius: 4px;
+    padding: 6px 8px;
+}
+
+/* Navbar Styles */
+nav {
+    display: grid;
+    width: 224px;
+    background-color: var(--primary);
+    padding: 8px;
+    color: var(--secondary);
+    Gap: 24px;
+    align-items: start;
+}
+
+.nav-header {
+    margin: 8px;
+    gap: 12px;
+}
+
+.brand-logo {
+    min-width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    font-size: 0;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.brand-logo img {
+    width: 39px;
+    height: 39px;
+    border-radius: 4px;
+}
+
+.brand-name {
+    display: grid;
+    width: 108px;
+    height: 42px;
+    gap: 4px;
+}
+
+.nav-header .icon {
+    height: 20px;
+}
+
+.nav-header .icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+.brand-name p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    opacity: .8;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.nav-body {
+    display: grid;
+    gap: 4px;
+}
+
+.page {
+    gap: 12px;
+    width: 100%;
+    height: 36px;
+    padding: 8px 16px;
+    opacity: .8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.page.Payments {
+    background: #FFFFFF1A;
+}
+
+.page.Payments {
+    opacity: 1;
+}
+
+.page svg {
+    font-size: 1.25rem;
+    fill: var(--secondary);
+}
+
+.nav-footer {
+    margin: 8px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    gap: 10px;
+    background: #353C53;
+    align-self: flex-end;
+}
+
+.nav-footer .icon {
+    fill: var(--secondary);
+    width: 36px;
+    height: 36px;
+    padding: 6px;
+    border-radius: 4px;
+    gap: 10px;
+    background: #FFFFFF1A;
+}
+
+.nav-footer .icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.nav-footer .credits p {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    opacity: .8;
+}
+
+/* Payments Page Styles */
+.payments {
+    width: 1216px;
+}
+
+.payments-header {
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    height: fit-content;
+    padding: 12px 32px;
+    gap: 16px;
+    background: linear-gradient(0deg, #FFFFFF, #FFFFFF),
+        linear-gradient(0deg, #D9D9D9, #D9D9D9);
+    border-bottom: 1px solid #D9D9D9
+}
+
+.payments-header .heading {
+    gap: 16px;
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.payments-header .subtext {
+    gap: 6px;
+}
+
+.subtext img {
+    width: 14px;
+    height: 14px;
+}
+
+.subtext p {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4D4D4D;
+}
+
+.searchbar {
+    position: relative;
+}
+
+.searchbar input {
+    width: 100%;
+    padding: 9px 16px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    background: #F2F2F2;
+    padding-left: 32px;
+    color: #4D4D4D;
+}
+
+.searchbar i {
+    position: absolute;
+    left: 10px;
+    top: 25%;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4D4D4D;
+}
+
+.menu {
+    justify-content: flex-end;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.menu img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Overview Styles */
+.overview {
+    padding: 60px;
+    background-color: #FAFAFA;
+}
+
+.heading1 {
+    margin-top: 24px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.heading1 div {
+    background-color: var(--secondary);
+    box-shadow: 0px 2px 6px 0px #1A181E0A;
+    padding: 20px;
+    border-radius: 8px;
+    gap: 16px;
+}
+
+.heading1 p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4D4D4D;
+}
+
+.heading1 em {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+/* Payment table styles */
+.payment-tables {
+    margin-top: 32px;
+}
+
+.searchbar-2 input {
+    background-color: var(--secondary);
+    border-radius: 4px;
+    border: 1px solid #D9D9D9;
+}
+
+.payment-tables .button {
+    margin-left: 8px;
+}
+
+.table {
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--secondary);
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+th {
+    background: #F2F2F2;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #4D4D4D;
+}
+
+td,
+th {
+    text-align: right;
+}
+
+.order-id {
+    text-align: left;
+}
+
+td {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #1A181E;
+    padding: 14px 12px;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+td.order-id {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+    color: #146EB4;
+}
+
+.order-date {
+    text-align: center;
+}
