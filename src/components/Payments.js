@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import Table from "./Table";
+import Pagination from "./Pagination";
 import Overview from "./Overview";
 
 function Payments() {
@@ -10,6 +11,7 @@ function Payments() {
       <section className="overview">
         <Overview />
         <Table />
+        <Pagination />
       </section>
     </div>
   );

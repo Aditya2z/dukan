@@ -31,9 +31,9 @@ function Table() {
           </tr>
         </thead>
         <tbody>
-          {ordersData.map((order) => {
+          {ordersData.slice(0, 20).map((order, index) => {
             return (
-              <tr>
+              <tr key={index}>
                 <td className="order-id">#{order.orderId}</td>
                 <td className="order-date">{order.orderDate}</td>
                 <td>{order.orderAmount}</td>

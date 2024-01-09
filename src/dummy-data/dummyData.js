@@ -19,6 +19,7 @@ import { CiSearch } from "react-icons/ci";
 import { MdOutlineFileDownload } from "react-icons/md";
 import { BiSortAlt2 } from "react-icons/bi";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { LuMenuSquare } from "react-icons/lu";
 
 let pages = [
   { name: "Home", icon: <GoHome /> },
@@ -45,6 +46,7 @@ let extraIcons = {
   download: <MdOutlineFileDownload />,
   sort: <BiSortAlt2 />,
   downarrow2: <TiArrowSortedDown />,
+  menu: <LuMenuSquare />,
 };
 
 const ordersData = [

@@ -13,7 +13,7 @@ function Navbar() {
             <h3>Nishyan</h3>
             <p>Visit store</p>
           </div>
-          <figure className="icon">{extraIcons.downArrow}</figure>
+          <i className="icon">{extraIcons.downArrow}</i>
         </div>
         <ul className="nav-body">
           {pages.map((page) => {

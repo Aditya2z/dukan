@@ -6,7 +6,7 @@ import "../styles/style.css";
 
 function App() {
   return (
-    <div className="flex">
+    <div className="flex container-100">
       <Navbar />
       <Payments />
     </div>

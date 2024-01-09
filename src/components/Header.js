@@ -16,8 +16,8 @@ function Header() {
           <i>{extraIcons.search}</i>
         </div>
         <div className="menu flex">
-          <img src="/static/icons/Menu(1).png" alt="menu"></img>
-          <img src="/static/icons/Menu.png" alt="menu"></img>
+          <i>{extraIcons.menu}</i>
+          <i>{extraIcons.downarrow2}</i>
         </div>
       </section>
   );

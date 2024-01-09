@@ -5,10 +5,10 @@ function Overview() {
     <section className="overview-headings">
     <div className="flex align-center justify-between">
       <h2>Overview</h2>
-      <select className="button">
-        <option selected>Last Month</option>
-        <option>Option 2</option>
-        <option>Option 3</option>
+      <select className="button" defaultValue={"Last Month"}>
+        <option value={"Last Month"}>Last Month</option>
+        <option value={"option 2"}>Option 2</option>
+        <option value={"option 3"}>Option 3</option>
       </select>
     </div>
     <div className="grid heading1 align-center justify-between">
